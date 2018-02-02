@@ -1,7 +1,7 @@
-interface wordObj {
+interface Word {
     type: string;
     default: string;
     examples: string;
 }
 
-export default wordObj;
+export default Word;
