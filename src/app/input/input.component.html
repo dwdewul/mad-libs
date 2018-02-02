@@ -1,0 +1,24 @@
+<div *ngFor="let wordInput of wordInputs" class="mb-3">
+    <label for="{{wordInput.type}}" class="text-capitalize">
+        {{wordInput.type}}
+    </label>
+    <input 
+        type="text" 
+        class="form-control text-center" 
+        [(ngModel)]="wordInput.default"
+        id="{{wordInput.type}}"
+    />
+    <small>{{wordInput.examples}}</small>
+</div>
+
+<hr>
+
+<div class="row justify-content-center">
+    <h2>Story</h2>
+    <app-story 
+        [exclamation]="wordInputs[0]"
+        [adverb]="wordInputs[1]"
+        [noun]="wordInputs[2]"
+        [adjective]="wordInputs[3]"
+    ></app-story>
+</div>
